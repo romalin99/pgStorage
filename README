@@ -1,3 +1,24 @@
+Modern, asynchronous and synchronous, and wicked fast C++1y  cluster client for Postgres-XL[Build Status] (https://C++17)
+
+pgStorage is a C++ interface to the distribute store that makes it easy to write applications that are both elegant and high-performance. Communication should be a means to an end, not something we spend a lot of time worrying about. pgStorage takes care of the details so you can move on to the interesting part of your project.
+
+Features:
+
+Expressive asynchronous and synchronous function, 
+customized by return value
+class methods, bind expressions, or any std::function
+Thread-safe - use one client in multiple threads or multiple clients in one
+Automatic queue, even for synchronous calls from separate threads
+Low-level access when needed
+Accessible and robust error handling
+Configurable logging level and output to any ostream via glog to open
+Full SQL support for postgres-xl fixed.
+Fast - developed for robotics applications
+100% clean Valgrind reports
+There is no dependency on Boost or any other libraries.
+
+
+
 //压力测试
 curl -i -X POST -H "'Content-type':'application/x-www-form-urlencoded', 'charset':'utf-8', 'Accept': 'text/plain'" -d '{"table":"companyt101","method":"select","type":2,"statement":"select * from compa;","uuid":"a3879c8e-0499-11e7-8b3e-0242ac110002"} ' 192.168.2.46:11000/v2 
 
