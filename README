@@ -1,6 +1,8 @@
+QQ:2022998727,Wechart:kwg_romalin
+
 Modern, asynchronous and synchronous, and wicked fast C++1y  cluster client for Postgres-XL[Build Status] (https://C++17)
 
-pgStorage is a C++ interface to the distribute store that makes it easy to write applications that are both elegant and high-performance. Communication should be a means to an end, not something we spend a lot of time worrying about. pgStorage takes care of the details so you can move on to the interesting part of your project.
+pgStorage is a C++ interface to the postgres distribute store that makes it easy to write applications that are both elegant and high-performance. Communication should be a means to an end, not something we spend a lot of time worrying about. pgStorage takes care of the details so you can move on to the interesting part of your project.
 
 Features:
 
