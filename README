@@ -70,6 +70,3 @@ curl -i -X POST -H "'Content-type':'application/x-www-form-urlencoded', 'charset
 
 ./bin/Release/ethiSpark  -n 1000000  -c 100  -t 5  -k http://192.168.2.46:11000/v2
 
-
-Group:
-WechatIMG1.jpeg
