@@ -17,6 +17,45 @@ Fast - developed for robotics applications
 100% clean Valgrind reports
 There is no dependency on Boost or any other libraries.
 
+void TestTransaction() {
+	req_t req;  res_t res;
+	req.table = "compa";
+	req.method = "select";
+	req.type=2;
+	req.statement = R"(select * from compa limit 10)";
+	gPgCluser.TExec(res, req);
+	cout<<res.result<<endl;
+}
+void TestNonTransaction() {
+	req_t req;  res_t res;
+	req.table = "compa";
+	req.method = "select";
+	req.type=1;
+	req.statement = R"(select * from compa limit 10)";
+	req.uuid=get_uuid();
+	gPgCluser.NTExec(res, req);
+	cout<<res.result<<endl;
+}
+
+void TestInsert() {
+	req_t req;  res_t res;
+	req.table = "compa2";
+	req.method = "insert";
+	req.type=2;
+	req.statement = R"(INSERT INTO compa2(NAME,AGE,ADDRESS,SALARY) VALUES('Mark', 25, 'Rich-Mond ', 65000.00 );)";
+	req.uuid=get_uuid();
+	gPgAPool.enqueue(std::unique_ptr<ComplexPostgresRequest>(new ComplexPostgresRequest(req)));
+}
+int main(int argc, char* argv[]) 
+{
+	TestNonTransaction();
+	TestTransaction();
+	TestInsert();
+	return 0;
+}
+
+    Contact GitHub API Training Shop Blog About 
+
 
 
 //压力测试
