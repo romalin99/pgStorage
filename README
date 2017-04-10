@@ -1,0 +1,9 @@
+//压力测试
+curl -i -X POST -H "'Content-type':'application/x-www-form-urlencoded', 'charset':'utf-8', 'Accept': 'text/plain'" -d '{"table":"companyt101","method":"select","type":2,"statement":"select * from compa;","uuid":"a3879c8e-0499-11e7-8b3e-0242ac110002"} ' 192.168.2.46:11000/v2 
+
+{
+	ln -sf  jsondata  postd
+	ab -n 20000 -kc 500 -p postd -T 'Accept: application/json'  http://192.168.2.46:11000/v2
+}
+
+./bin/Release/ethiSpark  -n 1000000  -c 100  -t 5  -k http://192.168.2.46:11000/v2

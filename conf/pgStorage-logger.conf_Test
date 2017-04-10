@@ -1,0 +1,41 @@
+* GLOBAL:
+    FORMAT                  =   "%datetime | %levshort | %fbase:%line | %msg"  ##"%datetime | %level | %msg"
+    FILENAME                =   "./logs/global.log"
+    ENABLED                 =   true
+    TO_FILE                 =   true
+    TO_STANDARD_OUTPUT      =   false
+    MILLISECONDS_WIDTH      =   3
+    PERFORMANCE_TRACKING    =   true
+    MAX_LOG_FILE_SIZE       =   10737418240 
+	LOG_FLUSH_THRESHOLD     =   10000 ## Flush after every 100 logs
+* INFO:
+    FORMAT                  =   "%datetime | %levshort | %fbase:%line | %msg"  
+    FILENAME                =   "./logs/info.log"
+    ENABLED                 =   true
+    TO_FILE                 =   true
+    MAX_LOG_FILE_SIZE       =   10737418240 
+* DEBUG:
+    FILENAME                =   "./logs/debug.log"
+    TO_FILE                 =   true
+    ENABLED                 =  	true ## We will set it to false after development completed
+* WARNING:
+    FILENAME                =   "./logs/warning.log"
+    ENABLED                 =   true
+    TO_FILE                 =   true
+	LOG_FLUSH_THRESHOLD		=   1
+* TRACE:
+    FILENAME                =   "./logs/trace.log"
+    TO_FILE                 =	true ## Unnecessary configuration cuz its already true in GLOBAL but doing it anyway!
+    ENABLED                 =	true
+* VERBOSE:
+    FORMAT                  =   "%datetime | %levshort | %fbase:%line | %msg"  ##"%datetime{%d/%M/%y} | %level-%vlevel | %msg"
+    TO_FILE                 =   true
+    ENABLED                 =   true
+* ERROR:
+    FILENAME                =   "./logs/error.log"
+    ENABLED                 =   true
+    TO_FILE                 =   true
+* FATAL:
+    FILENAME                =   "./logs/fatal.log"
+    TO_FILE                 =   true
+    ENABLED                 =   true
