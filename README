@@ -1,4 +1,4 @@
-QQ:2022998727,Wechart:kwg_romalin
+QQ: 2022998727 wechart: kwg_romalin
 
 Modern, asynchronous and synchronous, and wicked fast C++1y  cluster client for Postgres-XL[Build Status] (https://C++17)
 
@@ -69,3 +69,7 @@ curl -i -X POST -H "'Content-type':'application/x-www-form-urlencoded', 'charset
 }
 
 ./bin/Release/ethiSpark  -n 1000000  -c 100  -t 5  -k http://192.168.2.46:11000/v2
+
+
+Group:
+WechatIMG1.jpeg
